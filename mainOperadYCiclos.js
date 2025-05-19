@@ -51,3 +51,65 @@ if( edad2 >= 18 || dinero2) {
   //  console.log('Número: ' + i);
     //i++;
 //} while (i < 8); Este código imprimirá los números del 0 al 7, asegurando que el bloque de código se ejecute al menos una vez.
+
+// actividad: tenes q saludar en 5 veces con la frase "hola mundo"
+
+// CICLO POR REPETICION (FOR)
+ for(let i = 0; i < 5; i++){
+   console.log("hola mundo");
+ }
+
+ //CICLO POR CONDICION 
+const password = "1234";
+let passwordIngresado = prompt("Ingrese su contraseña");
+while(passwordIngresado != password){
+    passwordIngresado = prompt ("Ingrese su contraseña");
+}
+
+// CONTROLANDO CICLOS: USO DE "BREAK" Y "CONTINUE"
+// Las declaraciones "break" y "continue" permiten manejar el flujo de ejecución de formas mas flexibles y potentes
+
+// BREAK:
+// se utiliza para SALIR DE UN CICLO de forma INMEDIATA,sin importar si la condición del ciclo sigue siendo true.
+//es útil cuando necesitas detener el ciclo en una condición particular.EJEMPLO:
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+    break; // Sale del ciclo cuando i es igual a 5
+    }
+    console.log(i); // Imprime los números de 0 a 4
+}
+
+//CONTINUE:
+// OMITE LA INTERACIÓN ACTUAL del ciclo y CONTINUA con la SIGUIENTE,siempre y cuando la condición siga siendo "true" 
+//es efectivo en casos donde solo algunas condiciones específicas requieren que el ciclo se omita, como saltarse valores especiales o erróneos dentro de una secuencia de datos.
+//EJEMPLO:
+  
+for (let i = 0; i < 10; i++) {
+    if (i % 2 === 0) {
+     continue; // Omite los números pares
+    }
+    console.log(i); // Imprime los números impares entre 0 y 9
+}
+
+//A CONSIDERAR SIEMPRE:
+//- lugar de uso: ambas declaraciones se pueden usar en todos los tipos de ciclos(for,whi,do...while)
+//- control de flujo: ayudan a hacer el codigo mas legible
+//- prevención de bucles infinitos: es crucial actualizar variables de control de los bucles cuando se utilizan
+// "break" o "continue" para evitar ciclos sin fin.
+
+
+// ejemplo validor de usuario mas condicionales
+
+ const usuarios = [ // a esto se lo denomina ARRAY de usuarios
+  {nombre: "Ana" , edad: 20, aceptoTerminos: false},
+  {nombre: "Pablo" , edad: 37, aceptoTerminos: true},
+  {nombre: "Agustin" , edad: 15, aceptoTerminos: true},
+  {nombre: "Carlos" , edad: 14, aceptoTerminos: true},
+ ]
+
+ for(let i = 0; i < usuarios.length; i++){ // el ".lenght" es la cant de elementos q tiene el array usuario
+   if(usuarios[i].edad >= 18 && usuarios[i].aceptoTerminos){
+     console.log(usuarios[i].nombre);
+   }
+ }
+
