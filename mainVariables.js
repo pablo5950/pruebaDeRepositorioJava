@@ -30,24 +30,3 @@ console.log("Número:", numero);
 console.log("Texto:", texto);
 console.log("Booleano:", esVerdadero);
 
-// demo operadores:
-
-let edad2 =  18;
-let dinero = true;
-
-if( edad2 >= 18 && dinero) { // operador logico AND (&&) = se tienen q cumplir ambas condiciones para q el resultado sea true
- console.log("podes ingresar al bar");
-} else {
- console.log("sos menor,anda a estudiar piscui");
-}
-
-//sino esta el operador OR (||),tiene q cunplir al menos una de las condiciones ejemplo:
-let edad3 =  17;
-let dinero3 = false;
-
-if( edad3 >= 18 || dinero3) { 
- console.log("podes ingresar al bar");
-} else {
- console.log("sos menor,anda a estudiar piscui");
-}
-
