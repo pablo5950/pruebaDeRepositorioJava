@@ -113,3 +113,11 @@ for (let i = 0; i < 10; i++) {
    }
  }
 
+//NULLISH COALESCING(??): sirve para ASIGNAR un VALOR por DEFECTO solo si la variable es NULL o UNDEFINED.
+//es más preciso que ||, por que no toma 0,"" o false como valores vacios.EJEMPLO:
+
+//Imaginemos que un usuario ingresa su nombre,pero sino lo hace,queremos mostrar "INVITADO" como valor por defecto.
+
+let nombreUsuario = null; //Supongamos que el usuario no ingresó nada
+let nombreMostrado = nombreUsuario ?? "invitado";
+console.log(`👋 Bienvenido, ${nombreMostrado}!`);
